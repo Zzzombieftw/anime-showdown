@@ -8,6 +8,7 @@ import * as authService from '../../services/authService'
 import Users from '../Users/Users'
 import * as profileAPI from '../../services/profileService'
 import GamePage from '../GamePage/GamePage'
+import ProfileDetails from '../ProfileDetails/ProfileDetails'
 
 class App extends Component {
 	state = {
@@ -55,6 +56,11 @@ class App extends Component {
 				<Route exact path='/gamePage'>
 					<GamePage history={this.props.history}/>
 				</Route>
+				<Route exact path="/profile"
+				render={()=> 
+					<ProfileDetails/>
+			}
+				/>
 			</>
 		)
 	}
